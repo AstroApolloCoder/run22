@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/x-icon" href="https://cdn.pixabay.com/photo/2012/04/24/18/10/man-40739_960_720.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+          background-image: url(https://cdn.pixabay.com/photo/2017/03/25/17/55/colorful-2174045_960_720.png);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        </style>
+    <title>RUN22</title>
+</head>
+<body>
+    <CEnter>
+<H1 style="font-size: 300% ; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">RUN22</H1>
+<BR></BR>
+
+<input type="text" placeholder="Introdu numele clasei si data de azi" id="nume" style="border: 3px solid #8d5757;" >
+<input type="number"  id="dist" placeholder="Lungimea terenului in m" style="border: 3px solid #555;">
+<button type="submit" onclick="fin()" style="background-color: #4f8001; border: none; color: white; padding: 16px 32px; text-decoration: none; margin: 4px 2px; cursor: pointer;">Salveaza date</button>
+<br>
+
+<input type="number" placeholder="Introdu timpul de alergare in secunde" id="talerg" style="border: 3px solid #686868;"> 
+<input type="text"  id="numelev" placeholder="Introdu numele elevului" style="border: 3px solid #5f4a4a;"><button onclick="saven()"  type="submit" style="background-color: #2e8669; border: none; color: white; padding: 16px 32px; text-decoration: none; margin: 4px 2px; cursor: pointer;">Salveaza elev</button>
+<br>
+<button onclick="window.print()" style="background-color: #ff4141; border: none; color: white; padding: 16px 32px; text-decoration: none; margin: 4px 2px; cursor: pointer;">PRINTEAZA</button>
+<br>
+<h1 id="out"></h1>
+<h2 id="disto"></h2>
+<p id="out1"></p>
+<p id="out2"></p>
+<p id="out3"></p>
+<p id="out4"></p>
+<p id="out5"></p>
+<p id="out6"></p>
+<p id="out7"></p>
+<p id="out8"></p>
+<p id="out9"></p>
+<p id="out10"></p>
+<p id="out11"></p>
+<p id="out12"></p>
+<p id="out13"></p>
+<p id="out14"></p>
+<p id="out15"></p>
+<p id="out16"></p>
+<p id="out17"></p>
+<p id="out18"></p>
+<p id="out19"></p>
+<p id="out20"></p>
+<p id="out21"></p>
+<p id="out22"></p>
+<p id="out23"></p>
+<p id="out24"></p>
+<p id="out25"></p>
+<p id="out26"></p>
+<p id="out27"></p>
+<p id="out28"></p>
+<p id="out29"></p>
+<p id="out30"></p>
+<p id="out31"></p>
+<p id="out32"></p>
+<p id="out33"></p>
+<p id="out34"></p>
+<p id="out35"></p>
+<p id="out36"></p>
+<p id="out37"></p>
+<p id="out38"></p>
+<p id="out39"></p>
+<p id="out40"></p>
+    </CEnter>
+    
+<script>
+      const elev=[];
+      const timp=[];
+    
+     function fin(){
+   nume=document.getElementById("nume").value;
+ document.getElementById("out").innerHTML= nume;
+ d=document.getElementById("dist").value;
+ if (d>0){
+ document.getElementById("disto").innerHTML= d+" m";
+ }
+   }
+    function saven(){
+      
+elev.push(document.getElementById("numelev").value);
+timp.push(document.getElementById("talerg").value);
+document.getElementById("talerg").value ="";
+document.getElementById("numelev").value ="";
+
+    i=0;
+    n=i+1;
+    x = timp.length;
+    while (i<x){
+        t = timp[i]
+        v = Math.round(d/t);
+        if(d>0){
+      document.getElementById("out"+n).innerHTML= n+". "+elev[i]+" - "+timp[i]+" secunde"+"   Viteza de: "+ v +" m/s";
+        }
+        else{
+            document.getElementById("out"+n).innerHTML= n+". "+elev[i]+" - "+timp[i]+" secunde";
+        }
+       i++;
+    n=i+1;
+    }
+
+} 
+
+</script>
+</body>
+</html>
